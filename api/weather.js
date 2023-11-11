@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { apiKey } from '../constants';
 
-const forecastEndpoint = params=> `https://api.openweathermap.org/data/2.5/forecast?q=${params.cityName}&cnt=${params.days}&units=metric&appid=${apiKey}`;
-const locationsEndpoint = params=> `http://api.openweathermap.org/geo/1.0/direct?q=${params.cityName}&limit=5&appid=${apiKey}`;
+const forecastEndpoint = params => `https://api.openweathermap.org/data/2.5/forecast?q=${params.cityName}&cnt=${params.days}&units=metric&appid=${apiKey}`;
+const locationsEndpoint = params => `http://api.openweathermap.org/geo/1.0/direct?q=${params.cityName}&limit=5&appid=${apiKey}`;
 
-const apiCall = async (endpoint) =>{
+const apiCall = async (endpoint) => {
   const options = {
     method: 'GET',
     url: endpoint,
@@ -19,12 +19,12 @@ const apiCall = async (endpoint) =>{
   }
 }
 
-export const fetchWeatherForecast = params=>{
+export const fetchWeatherForecast = params => {
   let forecastUrl = forecastEndpoint(params);
   return apiCall(forecastUrl);
 }
 
-export const fetchLocations = params=>{
+export const fetchLocations = params => {
   let locationsUrl = locationsEndpoint(params);
   return apiCall(locationsUrl);
 }
