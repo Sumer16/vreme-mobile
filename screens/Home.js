@@ -13,6 +13,7 @@ import { fetchLocations, fetchWeatherForecast } from '../api/weather';
 import { debounce } from 'lodash';
 import { theme } from '../theme';
 import * as Progress from 'react-native-progress';
+import { getData, storeData } from '../utils/asyncStorage';
 
 // Icons
 import { MagnifyingGlassIcon, XMarkIcon } from 'react-native-heroicons/outline';
@@ -48,6 +49,7 @@ export default function Home() {
       // console.log('Got Forecast', data);
       setWeather(data);
       setLoading(false);
+      storeData('city',location.name);
     })
   }
 
@@ -56,18 +58,18 @@ export default function Home() {
   }, [])
 
   const fetchMyWeatherData = async () => {
-    // let myCity = await getData('city');
-    // let cityName = 'Portland';
+    let myCity = await getData('city');
+    let cityName = 'Portland';
     
-    // if(myCity) {
-    //   cityName = myCity;
-    // }
+    if(myCity) {
+      cityName = myCity;
+    }
 
     fetchWeatherForecast({
-      cityName: 'Portland',
+      cityName,
       days: '7'
     }).then(data=>{
-      console.log('Got Data: ',data.forecast.forecastday);
+      // console.log('Got Data: ',data.forecast.forecastday);
       setWeather(data);
       setLoading(false);
     })
@@ -75,7 +77,7 @@ export default function Home() {
 
   const handleTextDebounce = useCallback(debounce(handleSearch, 1200), []);
 
-  console.log(weather);
+  // console.log(weather);
   const { location, current } = weather;
 
   return (
