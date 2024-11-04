@@ -1,5 +1,7 @@
 # Vreme | Weather App
 
+### NOTE: This project is not maintained anymore.
+
 ## About Vreme
 
 Vreme is a fully functional weather application developed using the popular React Native framework & designed using NativeWind and TailwindCSS. This application allows users to check weather for a city and also have a 7-day weather forecast for the city. This Weather API is provided by the [WeatherAPI](https://weatherapi.com).
@@ -9,10 +11,10 @@ Vreme is a fully functional weather application developed using the popular Reac
 <table>
   <tr>
     <td>
-      <img src="./img1.png" width=320 height=600 alt="First Screenshot" />
+      <img src="./img1.png" width=250 height=500 alt="First Screenshot" />
     </td>
     <td>
-      <img src="./img2.png" width=320 height=600 alt="Second Screenshot" />
+      <img src="./img2.png" width=250 height=500 alt="Second Screenshot" />
     </td>
   </tr>
 </table>
