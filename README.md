@@ -4,7 +4,9 @@
 
 ## About Vreme
 
-Vreme is a fully functional weather application developed using the popular React Native framework & designed using NativeWind and TailwindCSS. This application allows users to check weather for a city and also have a 7-day weather forecast for the city. This Weather API is provided by the [WeatherAPI](https://weatherapi.com).
+Vreme is a fully functional weather mobile application developed using the popular React Native framework & designed using NativeWind and TailwindCSS. This application allows users to check weather for a city and also have a 7-day weather forecast for the city. This Weather API is provided by the [WeatherAPI](https://weatherapi.com).
+
+Here check out the [repo](https://github.com/Sumer16/vreme) for Vreme website that is developed using React & TypeScript.
 
 ## Vreme Application Screenshots
 
